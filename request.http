@@ -1,0 +1,50 @@
+### Get single user
+GET http://127.0.0.1:3001/auth/1 HTTP/1.1
+
+### Create a new user
+POST http://127.0.0.1:3001/auth/signup HTTP/1.1
+Content-Type: application/json
+
+{
+   "email" : "medo@example.com",
+   "password" : "123456"
+}
+
+### Login
+POST http://127.0.0.1:3001/auth/signin HTTP/1.1
+Content-Type: application/json
+
+{
+   "email" : "medo@example.com",
+   "password" : "123456"
+}
+### delete users
+POST  http://127.0.0.1:3001/auth/delete HTTP/1.1    
+Content-Type: application/json
+
+{
+   "id" : "4"
+}
+
+
+### Update user
+PATCH http://127.0.0.1:3001/auth/1 HTTP/1.1
+Content-Type: application/json 
+
+{
+   "email" : "moe@example.com",
+   "password" : "12345678"
+}
+
+
+### Create movie
+POST http://127.0.0.1:3001/movies HTTP/1.1
+Content-Type: application/json
+
+{
+   "title" : "Spider-Man_ Far from Home",
+   "link" : "https://boosterx.stream/v/an3RpZ8Q6GJa/"
+}
+
+### Get all movies
+GET http://127.0.0.1:3001/movies HTTP/1.1
